@@ -1,0 +1,1 @@
+<p class="footer-text">"do not take life too seriously. You will never get out of it alive..."</p>
