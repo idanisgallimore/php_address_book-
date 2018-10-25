@@ -24,7 +24,6 @@
         ?>
     </div>
     <div class="footer">
-    <!-- Remember to make it go away when you log in -->
         <?php include("includes/footer.inc.php"); ?>
     </div>
 </body>

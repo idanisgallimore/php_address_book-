@@ -1,4 +1,3 @@
-<h2 id="list-title">all your contacts</h2>
 <?php 
 include_once("function.php");
     $query = "SELECT phonenumber, name, lastname, email from contact";
@@ -11,6 +10,11 @@ include_once("function.php");
             $name = $row['name'];
             $lastname = $row['lastname'];
             $email = $row['email'];
+
+            echo "<div class=\"list-cont\">
+                <h2 id=\"list-title\">all your contacts</h2>
+                <a class=\"contact-title\" href=\"index.php?content=showpost&id=$phonenumber\"> $lastname, $name</a>
+            </div>";
         }
     }
 
