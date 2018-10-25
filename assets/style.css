@@ -96,7 +96,7 @@ input[type=text]:focus{
 }
 
 .main{
-    height: 310px;
+    height: 500px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -104,6 +104,8 @@ input[type=text]:focus{
 }
 .main-title{
     font-size: 50px;
+    display: inline-block;
+    /* height: 305px; */
     color: #a9a9f5;
 }
 
@@ -142,4 +144,38 @@ input[type=text]:focus{
     text-decoration: none; 
     color: #a9a9f5;
     padding-top: 30px;
+}
+.post-container{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.post-input{
+    border: 0;
+    height: 30px;
+    margin-bottom: 30px;
+    border-bottom: black 3px solid;
+}
+
+.post-input::placeholder{
+    color: #a9a9f5;
+    font-size: 20px;
+}
+.post-title{
+    margin-bottom: 30px;
+}
+
+.submit{
+    border: solid 3px #f5a9a9;
+    color: #a9a9f5;
+    height: 35px;
+    background-color: white;
+    font-size: 20px;
+}
+.submit:hover{
+    color: gray;
+    cursor: pointer;
 }

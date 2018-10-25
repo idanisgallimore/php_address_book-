@@ -34,14 +34,21 @@ include_once("function.php");
     $result = connectToDb($query);
     $row = mysql_fetch_array($result, MYSQL_ASSOC);
     $phonenumber2 = $row['phonenumber'];
-    if($phonenumber2 == $phonenumber){
+    if($phonenumber2 === $phonenumber && $phonenumber2 != null){
         echo "<h2>that phone number is already listed!</h2>\n
         <a class=\"goback\" href=\"index.php?content=newpost\">go back!</a>";
         $badpost = 1; 
     }
 
     if($badpost != 1){
-        
+        $query = "INSERT into contact(phonenumber, name, lastname, email) VALUES('$phonenumber', '$name', '$lastname', '$email')";
+        $result = mysql_query($query) or die("did not add contact listing ".mysql_error());
+        if($result){
+            echo "<h2>Listing has been added.</h2>";
+            exit;
+        }else{
+            echo "<h2>listing not added</h2>";
+        }
     }
 
 ?>
