@@ -15,6 +15,7 @@ include_once("function.php");
         <h3 class=\"phonenumber listf\">$phonenumber</h3>
         <h3 class=\"email listf\">$email</h3>
         <a class=\"goback\" href=\"index.php?content=list\">go back!</a>
+        <a class=\"goback\" href=\"index.php?content=delete&id=$phonenumber\">delete</a>
     </div>";
 
 
