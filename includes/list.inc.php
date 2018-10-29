@@ -1,6 +1,6 @@
 <?php 
 include_once("function.php");
-    $query = "SELECT phonenumber, name, lastname, email from contact";
+    $query = "SELECT phonenumber, name, lastname, email from contact ORDER BY lastname";
     $result = connectToDb($query);
     if(mysql_num_rows($result) == 0){
         echo "<h2 id=\"list-title\">There are no contacts</h2>";
